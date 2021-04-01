@@ -1,0 +1,13 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/contentModel.xml
+/.idea.UIAnimation.iml
+/projectSettingsUpdater.xml
+# Datasource local storage ignored files
+/../../../../../../:\1Github\UIAnimation\.idea\.idea.UIAnimation\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
