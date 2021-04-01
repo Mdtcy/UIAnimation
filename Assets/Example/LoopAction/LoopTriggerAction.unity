@@ -533,6 +533,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1135660895986440226, guid: c7a66782e6f3e034b975ee15c26fcecb, type: 3}
+      propertyPath: loopTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1135660895986440226, guid: c7a66782e6f3e034b975ee15c26fcecb, type: 3}
+      propertyPath: infiniteLoop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1135660895986440226, guid: c7a66782e6f3e034b975ee15c26fcecb, type: 3}
+      propertyPath: waitThenTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1135660895986440414, guid: c7a66782e6f3e034b975ee15c26fcecb, type: 3}
       propertyPath: m_Name
       value: LoopFade

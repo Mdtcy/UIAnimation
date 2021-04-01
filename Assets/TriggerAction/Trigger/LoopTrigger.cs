@@ -4,6 +4,17 @@ using UnityEngine;
 // todo 导入MEC后替换
 public class LoopTrigger : MonoBehaviour
 {
+    // 是否无限循环
+    [SerializeField]
+    private bool infiniteLoop = true;
+
+    // 循环次数 todo hide on can not infinite loop
+    [SerializeField]
+    private int loopTime;
+
+    // 剩余循环次数
+    private int remainLoopTime;
+
     // 间隔时间
     [SerializeField]
     private float interval;
@@ -29,15 +40,35 @@ public class LoopTrigger : MonoBehaviour
 
     IEnumerator ILoop()
     {
-        if (waitThenTrigger)
+        if (infiniteLoop)
         {
-            yield return new WaitForSeconds(interval);
-        }
+            if (waitThenTrigger)
+            {
+                yield return new WaitForSeconds(interval);
+            }
 
-        while (true)
+            while (true)
+            {
+                action.Execute();
+
+                yield return new WaitForSeconds(interval);
+            }
+        }
+        else
         {
-            action.Execute();
-            yield return new WaitForSeconds(interval);
+            remainLoopTime = loopTime;
+
+            if (waitThenTrigger)
+            {
+                yield return new WaitForSeconds(interval);
+            }
+
+            while (remainLoopTime > 0)
+            {
+                action.Execute();
+                yield return new WaitForSeconds(interval);
+                remainLoopTime--;
+            }
         }
     }
 }
