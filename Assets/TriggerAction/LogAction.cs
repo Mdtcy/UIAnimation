@@ -7,9 +7,9 @@ public class LogAction : CustomAction
     public string LogContent;
 
     /// <inheritdoc />
-    public override void Excute()
+    public override void Execute()
     {
-        base.Excute();
+        base.Execute();
         Debug.Log(LogContent);
     }
 }
