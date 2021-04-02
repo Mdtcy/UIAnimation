@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 // todo 导入MEC后替换
+// todo 增加remaintime 参照Leanpulse 不用协程
 public class LoopTrigger : MonoBehaviour
 {
     // 是否无限循环
