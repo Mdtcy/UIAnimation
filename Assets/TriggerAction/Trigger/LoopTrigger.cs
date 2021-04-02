@@ -20,7 +20,7 @@ public class LoopTrigger : MonoBehaviour
     private float interval;
 
     [SerializeField]
-    private CustomAction action;
+    private ActionBase actionBase;
 
     // 第一次触发前需要等待
     [SerializeField]
@@ -49,7 +49,7 @@ public class LoopTrigger : MonoBehaviour
 
             while (true)
             {
-                action.Execute();
+                actionBase.Execute();
 
                 yield return new WaitForSeconds(interval);
             }
@@ -65,7 +65,7 @@ public class LoopTrigger : MonoBehaviour
 
             while (remainLoopTime > 0)
             {
-                action.Execute();
+                actionBase.Execute();
                 yield return new WaitForSeconds(interval);
                 remainLoopTime--;
             }

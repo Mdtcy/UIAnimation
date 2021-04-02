@@ -3,7 +3,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CopyTextAnimation : CustomAction
+public class CopyTextAnimation : ActionBase
 {
     [SerializeField]
     private Text txtSource;

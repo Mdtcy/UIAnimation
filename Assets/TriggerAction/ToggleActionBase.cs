@@ -4,7 +4,7 @@ using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ToggleAction : CustomAction
+public class ToggleActionBase : ActionBase
 {
     // todo 导入Odin后让他已读显示在inspector
     private bool             value;

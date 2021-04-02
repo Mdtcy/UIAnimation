@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LogAction : CustomAction
+public class LogActionBase : ActionBase
 {
     public string LogContent;
 
