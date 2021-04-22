@@ -1,13 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Collections;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class ToggleActionBase : ActionBase
 {
-    // todo 导入Odin后让他已读显示在inspector
-    private bool             value;
+    [ShowInInspector]
+    [ReadOnly]
+    private bool value;
 
     public  UnityEvent TrueEvent;
     public  UnityEvent FalseEvent;
